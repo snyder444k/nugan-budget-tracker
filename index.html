@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+      <span class="budget-plan">
+        <p>Budget</p>
+        <h4>Tracker</h4>
+      </span>
+      <span class="dater">
+        <p id="today"></p>
+        <h4 id="year"></h4>
+      </span>  
+    </header>
+
+    <main class="tracker">
+    <div class="input">
+
+         <div class="balance">
+        <span>
+            <p>Total balance <i class="fa-solid fa-eye"></i></p>
+            <h2 id="balance-num">$00000</h2>
+        </span>
+        <img src="/horizon.png" alt="">
+         </div>
+
+        <div class="form">
+         <h3 class="cash">Cash flow.</h3>
+         <input type="name" placeholder="type expenditure name..." id="expen">
+         <input type="number" placeholder="type amount..." id="amt">
+         <span><button onclick="addIncome()">Add income</button> <button onclick="addExpense()">Add expense</button></span>
+        </div>
+
+    </div>
+
+    <div class="output">
+     <div class="output-first">
+            
+        <div class="report">
+           <div class="finances">
+            <span class="fidget">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span class="income">
+                    <p class="let-income">Income</p>
+                    <p class="num-income" id="tot-inc">$0000</p>
+                </span>
+            </span>
+            <hr>
+            <span class="fidget">
+                 <i class="fa-solid fa-arrow-down"></i>
+                <span class="expense">
+                    <p class="let-expense">Expense</p>
+                    <p class="num-expense" id="tot-exp">$0000</p>
+                </span>
+            </span>
+           </div>
+        </div>
+
+        <div class="finance-health">
+            <h3>Financial Health.</h3>
+            <h1 class="status" id="status">GOOD</h1>
+        </div>
+
+    </div>
+        <div class="output-second">
+            <div class="transaction">
+
+          <h3>Transaction History</h3>
+
+          <div class="recents" id="recents">
+            
+            </div>
+
+            </div>
+        </div>
+    </div>
+    </main>
+
+
+
+
+
+    
+    
+    <script src="index.js"></script>
+</body>
+</html>
